@@ -21,7 +21,8 @@ class YahooSelenium(object):
         self.chrome_options.add_argument('--user-agent=' + kwargs.get(
             'user_agent', random.choice(USER_AGENT_LIST)
         ))
-        self.chrome_options.add_argument('headless')
+        self.chrome_options.add_argument('--headless')
+        self.chrome_options.add_argument('--no-sandbox')
         self.chrome_options.add_argument('--log-level=3')
         self.chrome_options.add_argument('--ignore-certificate-errors')
         self.chrome_options.add_argument('--ignore-ssl-errors')
